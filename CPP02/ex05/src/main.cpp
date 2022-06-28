@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 02:49:01 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/06/28 04:38:18 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/06/28 06:11:35 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int main(){
     Harl harl;
     
     harl = Harl();
-    harl.complain(harl, "infao");
+    harl.complain(harl, "debug");
 }

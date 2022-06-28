@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 02:50:31 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/06/28 04:44:49 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/06/28 06:10:36 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,12 @@ void    Harl::notthere(void){
 
 typedef void (Harl::*HarlMemFn)(void);
 
-void    tolowercase(std::string &str){
-    std::for_each(str.begin(), str.end(), [](char & c) {
-        c = ::tolower(c);
-    });
-}
 void    Harl::complain(Harl &harl, std::string level){
     HarlMemFn   complains[5] = {
         &Harl::debug,
-        &Harl::debug,
-        &Harl::warning,
+        &Harl::info,
         &Harl::error,
+        &Harl::warning,
         &Harl::notthere
     };
     std::string levels[4] = {"debug", "info", "warning", "error"};
