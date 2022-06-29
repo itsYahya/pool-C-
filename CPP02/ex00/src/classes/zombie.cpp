@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 02:37:23 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/06/27 03:50:13 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/06/29 00:37:28 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ std::string Zombie::getName(void){
 
 void    destroZombie(Zombie *zombie){
     std::cout << "Zombie named " << zombie->getName();
-    std::cout << " have been destroyed !\n";
+    std::cout << " has been destroyed !\n";
     delete zombie;
 }

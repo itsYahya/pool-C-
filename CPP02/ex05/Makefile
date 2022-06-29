@@ -6,14 +6,14 @@
 #    By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/28 03:34:00 by yel-mrab          #+#    #+#              #
-#    Updated: 2022/06/28 03:34:39 by yel-mrab         ###   ########.fr        #
+#    Updated: 2022/06/29 00:48:43 by yel-mrab         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CPP = c++
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 INC = -I ./inc
-
+HEADERS = inc/harl.hpp
 FILES = main  harl
 
 BDIR = build

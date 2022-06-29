@@ -5,37 +5,37 @@
 #                                                     +:+ +:+         +:+      #
 #    By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/06/27 02:42:55 by yel-mrab          #+#    #+#              #
-#    Updated: 2022/06/29 00:35:45 by yel-mrab         ###   ########.fr        #
+#    Created: 2022/06/28 03:34:00 by yel-mrab          #+#    #+#              #
+#    Updated: 2022/06/29 00:36:13 by yel-mrab         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = zomblies
+CPP = c++
+CFLAGS = -Wall -Wextra -Werror -std=c++98
 INC = -I ./inc
-HEADERS = inc/zombie.hpp
-DRBUILD = build
-CPPFLAGS = c++ -Wall -Wextra -Werror -std=c++98
 
-SRC = main newZombie randomChump\
-	classes/zombie
+FILES = main  harl
 
-OBJ = $(addprefix $(DRBUILD)/,$(SRC:=.o))
+BDIR = build
+OBJS = $(addprefix $(BDIR)/, $(FILES:=.o))
+
+NAME = harlFilter
 
 all : $(NAME)
-
-$(NAME) : $(OBJ)
-	$(CPPFLAGS) $(OBJ) -o $(NAME) $(INC)
-
-$(DRBUILD)/%.o : src/%.cpp $(HEADERS)
-	mkdir -p $(@D)
-	$(CPPFLAGS) -c $< -o $@ $(INC)
 	
+$(NAME) : $(OBJS)
+	$(CPP) $(MLXFLAGS) $(OBJS) -o $(NAME)
+
+$(BDIR)/%.o : src/%.cpp
+	@mkdir -p $(@D)
+	$(CPP) $(CFLAGS) -c $< -o $@ $(INC)
+
 clean :
-	rm -rf $(DRBUILD)
+	rm -rf $(BDIR)
 
 fclean : clean
 	rm -rf $(NAME)
 
 re : fclean all
 
-.PHONY : re fclean clean all	
+.PHONY : re fclean clean all
