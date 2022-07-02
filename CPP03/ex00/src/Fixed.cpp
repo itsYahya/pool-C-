@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 06:55:42 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/07/01 03:34:47 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/07/01 04:14:25 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void    Fixed::setRawBits(int const raw){
 }
 
 Fixed   &Fixed::operator=(const Fixed &fixed){
-    std::cout << "Copy assignment operator calle\n";
+    std::cout << "Copy assignment operator called\n";
     this->fxpoint = fixed.fxpoint;
     return (*this);
 }
