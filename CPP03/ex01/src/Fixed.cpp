@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 06:55:42 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/07/02 21:10:04 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/07/03 10:16:32 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Fixed   &Fixed::operator=(const Fixed &fixed){
 
 Fixed::Fixed(int const num){
     std::cout << "Int constructor called\n";
-    fxpoint = num << nfb;
+    fxpoint = roundf(num * (1 << nfb));
 }
 
 Fixed::Fixed(float const num){
