@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 06:55:42 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/07/04 14:02:28 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/07/04 14:06:35 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ Fixed::Fixed(int const num){
 }
 
 Fixed::Fixed(float const num){
-    std::cout << "Float constructor called" << std::endl;
+    std::cout << "Float constructor called\n";
     fxpoint = roundf(num * (1 << nfb));
 }
 
