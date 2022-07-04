@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 06:55:42 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/07/04 14:06:35 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/07/04 14:43:28 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,5 +142,16 @@ Fixed   Fixed::operator++(){
 Fixed   Fixed::operator++(int){
     Fixed   fixed(*this);
     fxpoint++;
+    return (fixed);
+}
+
+Fixed   Fixed::operator--(){
+    fxpoint--;
+    return (*this);
+}
+
+Fixed   Fixed::operator--(int){
+    Fixed   fixed(*this);
+    fxpoint--;
     return (fixed);
 }

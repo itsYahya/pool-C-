@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/01 03:35:52 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/07/04 10:48:17 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/07/04 14:44:17 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,10 @@ int main( void )
     std::cout << a << std::endl;
     std::cout << a++ << std::endl;
     std::cout << a << std::endl;
+    std::cout << --a << std::endl;
+    std::cout << a << std::endl;
+    std::cout << a-- << std::endl;
+    std::cout << "a : " << a << std::endl;
     std::cout << b << std::endl;
     std::cout << Fixed::max( a, b ) << std::endl;
     return (0);
