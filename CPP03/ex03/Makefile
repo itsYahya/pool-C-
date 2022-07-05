@@ -6,7 +6,7 @@
 #    By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/30 05:55:02 by yel-mrab          #+#    #+#              #
-#    Updated: 2022/07/04 19:03:24 by yel-mrab         ###   ########.fr        #
+#    Updated: 2022/07/05 11:13:17 by yel-mrab         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CPPFLAGS = C++ -Wall -Wextra -Werror -std=c++98
 FILES = classes/Point classes/Fixed main bsp
 HEADER = inc/Fixed.hpp
 OBJS = $(addprefix build/, $(FILES:=.o))
-NAME = roundf
+NAME = bsp
 
 all : $(NAME)
 
