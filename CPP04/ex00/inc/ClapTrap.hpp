@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 15:12:39 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/07/26 20:14:43 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/07/26 21:28:43 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class ClapTrap
         std::string                 name;
         unsigned int                hitPoint;
         unsigned int                enrgyPoint;
-        static const unsigned int   attackDamage = 0;
+        unsigned int                attackDamage;
         
     public:
         ClapTrap();

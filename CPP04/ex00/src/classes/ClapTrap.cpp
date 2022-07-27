@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 15:23:56 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/07/26 20:04:24 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/07/26 21:42:18 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,40 +15,49 @@
 std::map<std::string, ClapTrap> ClapTrap::claps;
 
 ClapTrap::ClapTrap(){
+    std::cout << "ClapTrap default constructor called !" << std::endl;
     this->name = "clap";
     this->enrgyPoint = 10;
     this->hitPoint = 10;
+    this->attackDamage = 0;
 }
 
 ClapTrap::~ClapTrap(){
-    std::cout << "destructor called !" << std::endl;
+    std::cout << "ClapTrap destructor called !" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name){
+    std::cout << "ClapTrap constructor called !" << std::endl;
     this->name = name;
     this->enrgyPoint = 10;
     this->hitPoint = 10;
+    this->attackDamage = 0;
 }
 
 ClapTrap::ClapTrap(std::string name, int addToMap){
+    std::cout << "ClapTrap constructor called !" << std::endl;
     this->name = name;
     this->enrgyPoint = 10;
     this->hitPoint = 10;
+    this->attackDamage = 0;
 	ClapTrap::claps[name] = *this;
 	addToMap = 0;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &clap){
+    std::cout << "ClapTrap copy constructor called !" << std::endl;
     this->name = clap.name;
     this->enrgyPoint = clap.enrgyPoint;
     this->hitPoint = clap.hitPoint;
+    this->attackDamage = clap.attackDamage;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &clap){
+    std::cout << "ClapTrap = operator called !" << std::endl;
     this->name = clap.name;
     this->enrgyPoint = clap.enrgyPoint;
     this->hitPoint = clap.hitPoint;
-
+    this->attackDamage = clap.attackDamage;
     return (*this);
 }
 
