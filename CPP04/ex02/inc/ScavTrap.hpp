@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 15:12:39 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/07/27 14:12:38 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/02 22:01:14 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class ScavTrap: public ClapTrap{
         ScavTrap(const ScavTrap &scav);
         ScavTrap    &operator=(const ScavTrap &scav);
         void        guardGate();
+        void        attack(const std::string &target);
 };
 
 #endif

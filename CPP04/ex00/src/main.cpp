@@ -6,26 +6,18 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 15:21:49 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/07/26 20:13:54 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/02 19:35:01 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 int main(void){
-    ClapTrap("hello", 1);
-    ClapTrap("hehe", 1);
+    ClapTrap clap("clap1"), clap2("clap2");
+
+    clap.attack("clap2");
+    clap2.takeDamage(clap2.getAttackDamage());
     
-    ClapTrap::claps["hello"].attack("hehe");
-    ClapTrap::claps["hello"].attack("hehe");
-    ClapTrap::claps["hello"].attack("hehe");
-    ClapTrap::claps["hello"].attack("hehe");
-    ClapTrap::claps["hello"].attack("hehe");
-    ClapTrap::claps["hello"].attack("hehe");
-    ClapTrap::claps["hello"].attack("hehe");
-    ClapTrap::claps["hello"].attack("hehe");
-    ClapTrap::claps["hello"].attack("hehe");
-    ClapTrap::claps["hello"].attack("hehe");
-    ClapTrap::claps["hello"].attack("hehe");
-    ClapTrap::claps["hello"].attack("hehe");
+    clap2.beRepaired(clap.getAttackDamage());
+    return (0);
 }

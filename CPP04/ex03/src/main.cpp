@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 15:21:49 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/02 18:18:28 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/02 23:11:26 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,6 @@ int main(void){
             scav1.takeDamage(scav1.getAttackDamage());
     }
     scav.whoAmI();
+    scav.guardGate();
+    scav.highFivesGuys();
 }

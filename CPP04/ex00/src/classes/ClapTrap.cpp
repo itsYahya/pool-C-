@@ -6,13 +6,11 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 15:23:56 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/07/26 21:42:18 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/02 21:38:31 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-
-std::map<std::string, ClapTrap> ClapTrap::claps;
 
 ClapTrap::ClapTrap(){
     std::cout << "ClapTrap default constructor called !" << std::endl;
@@ -32,16 +30,6 @@ ClapTrap::ClapTrap(std::string name){
     this->enrgyPoint = 10;
     this->hitPoint = 10;
     this->attackDamage = 0;
-}
-
-ClapTrap::ClapTrap(std::string name, int addToMap){
-    std::cout << "ClapTrap constructor called !" << std::endl;
-    this->name = name;
-    this->enrgyPoint = 10;
-    this->hitPoint = 10;
-    this->attackDamage = 0;
-	ClapTrap::claps[name] = *this;
-	addToMap = 0;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &clap){
@@ -70,7 +58,6 @@ void    ClapTrap::attack(const std::string &targate){
 		std::cout << "no enrgy left!" << std::endl;
 		return ;
 	}
-	ClapTrap::claps[targate].takeDamage(attackDamage);
     std::cout << "ClapTrap " << name;
     std::cout << " attacks " << targate;
     std::cout << ", causing " << attackDamage;
@@ -95,4 +82,8 @@ void	ClapTrap::beRepaired(unsigned int amount){
     std::cout << " repaired themselves!" << std::endl;
 	hitPoint += amount;
 	enrgyPoint--;
+}
+
+unsigned int    ClapTrap::getAttackDamage(){
+    return (attackDamage);
 }

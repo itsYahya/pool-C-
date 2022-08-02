@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 16:29:29 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/02 18:17:26 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/02 23:12:27 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ DiamondTrap::DiamondTrap(const DiamondTrap &diamond){
 }
 
 DiamondTrap::~DiamondTrap(){
-	std::cout << "Diamond defaulte destructor called" << std::endl;
+	std::cout << "Diamond destructor called" << std::endl;
 }
 
 DiamondTrap	&DiamondTrap::operator=(const DiamondTrap &diamond){
