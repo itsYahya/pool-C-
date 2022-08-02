@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 15:12:39 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/07/27 14:27:49 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/02 21:48:51 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,7 @@ ScavTrap::ScavTrap(){
 
 ScavTrap::ScavTrap(const ScavTrap &scav){
     std::cout << "ScavTrap copy constructor called !" << std::endl;
-    this->name  = scav.name;
-    this->attackDamage  = scav.attackDamage;
-    this->hitPoint  = scav.hitPoint;
-    this->enrgyPoint  = scav.enrgyPoint;
-    this->type = scav.type;
+    *this = scav;
 }
 
 ScavTrap    &ScavTrap::operator=(const ScavTrap &scav){
@@ -55,4 +51,16 @@ ScavTrap::~ScavTrap(){
 
 void        ScavTrap::guardGate(){
     std::cout << "ScavTrap is now in Gate keeper mode" << std::endl;
+}
+
+void    ScavTrap::attack(const std::string &targate){
+	if (enrgyPoint == 0){
+		std::cout << "no enrgy left!" << std::endl;
+		return ;
+	}
+    std::cout << "ScavTrap " << name;
+    std::cout << " attacks " << targate;
+    std::cout << ", causing " << attackDamage;
+    std::cout << " points of damage!" << std::endl;
+	enrgyPoint--;
 }

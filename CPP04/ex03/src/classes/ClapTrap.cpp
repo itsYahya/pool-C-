@@ -6,13 +6,11 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 15:23:56 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/07/27 14:54:28 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/02 22:56:58 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
-
-std::map<std::string, ClapTrap> ClapTrap::claps;
 
 ClapTrap::ClapTrap(){
     std::cout << "ClapTrap default constructor called !" << std::endl;
@@ -38,11 +36,7 @@ ClapTrap::ClapTrap(std::string name){
 
 ClapTrap::ClapTrap(ClapTrap const &clap){
     std::cout << "ClapTrap copy constructor called !" << std::endl;
-    this->name = clap.name;
-    this->enrgyPoint = clap.enrgyPoint;
-    this->hitPoint = clap.hitPoint;
-    this->attackDamage = 0;
-    this->type = clap.type;
+    *this = clap;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &clap){
@@ -64,7 +58,7 @@ void    ClapTrap::attack(const std::string &targate){
 		std::cout << "no enrgy left!" << std::endl;
 		return ;
 	}
-    std::cout << type << " " << name;
+    std::cout << "ClapTrap " << name;
     std::cout << " attacks " << targate;
     std::cout << ", causing " << attackDamage;
     std::cout << " points of damage!" << std::endl;

@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/27 15:14:29 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/07/27 16:55:48 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/02 22:41:58 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,7 @@ FragTrap::FragTrap(){
 
 FragTrap::FragTrap(const FragTrap &scav){
     std::cout << "FragTrap copy constructor called !" << std::endl;
-    this->name  = scav.name;
-    this->attackDamage  = scav.attackDamage;
-    this->hitPoint  = scav.hitPoint;
-    this->enrgyPoint  = scav.enrgyPoint;
-    this->type = scav.type;
+    *this = scav;
 }
 
 FragTrap    &FragTrap::operator=(const FragTrap &scav){
@@ -54,5 +50,5 @@ FragTrap::~FragTrap(){
 }
 
 void        FragTrap::highFivesGuys(){
-    std::cout << "positive high fives reques" << std::endl;
+    std::cout << "positive high fives" << std::endl;
 }
