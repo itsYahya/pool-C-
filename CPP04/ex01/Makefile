@@ -6,7 +6,7 @@
 #    By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/25 15:22:30 by yel-mrab          #+#    #+#              #
-#    Updated: 2022/07/27 14:15:22 by yel-mrab         ###   ########.fr        #
+#    Updated: 2022/08/02 18:14:08 by yel-mrab         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CPPFLAGS = C++ -Wall -Wextra -Werror -std=c++98
 FILES = classes/ClapTrap classes/ScavTrap main
 HEADER = inc/ClapTrap.hpp inc/ScavTrap.hpp
 OBJS = $(addprefix build/, $(FILES:=.o))
-NAME = ScavTrap
+NAME = ScavTrap.a
 
 all : $(NAME)
 
