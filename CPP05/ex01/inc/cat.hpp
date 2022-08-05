@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 15:58:57 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/05 01:42:39 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/05 16:05:59 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ class Cat : public Animal{
 		~Cat();
 		Cat		&operator=(Cat const &cat);
 		void	makeSound(void) const;
-		Brain	getBrain(void);
+		void	whatYouThink();
+		void	setIdea(std::string const &string);
 };
 
 #endif

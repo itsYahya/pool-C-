@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 17:08:46 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/05 01:33:03 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/05 16:36:59 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,18 @@ Dog &Dog::operator=(Dog const &dog){
 Dog::Dog(Dog const &dog){
 	std::cout << "Dog copy constructor called" << std::endl;
 	*this = dog;
-	this->brain = dog.brain;
+	this->brain = new Brain();
+	*this->brain = *dog.brain;
 }
 
 void	Dog::makeSound() const{
 	std::cout << "barking *__* ??" << std::endl;
+}
+
+void	Dog::whatYouThink(){
+	brain->whatYouThink();
+}
+
+void	Dog::setIdea(std::string const &string){
+	brain->setIdea(string);
 }
