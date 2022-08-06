@@ -6,15 +6,14 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 21:23:00 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/06 16:13:32 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/06 17:02:49 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(){
+Bureaucrat::Bureaucrat() : name("bureaucrat"){
 	std::cout << "Bureaucrat defealt constructor called !!" << std::endl;
-	this->name = "bureaucrat";
 	this->grade = 150;
 }
 
@@ -22,7 +21,7 @@ Bureaucrat::~Bureaucrat(){
 	std::cout << "Bureaucrat destructor called !!" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string name, int grade){
+Bureaucrat::Bureaucrat(const std::string name, int grade) : name (name){
 	std::cout << "Bureaucrat 'name && grade' constructor called !!" << std::endl;
 	if (grade > 150 || grade < 1)
 	{
@@ -30,13 +29,11 @@ Bureaucrat::Bureaucrat(std::string name, int grade){
 		if (grade > 150) message = "Bureaucrat::GradeTooLowException";
 		throw std::invalid_argument(message);
 	}
-	this->name = name;
 	this->grade = grade;
 }
 
 Bureaucrat	&Bureaucrat::operator=(Bureaucrat const &bureaucrat){
 	std::cout << "Bureaucrat assignment operator called !!" << std::endl;
-	this->name = bureaucrat.name;
 	this->grade = bureaucrat.grade;
 	return (*this);
 }

@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 21:23:12 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/06 15:53:28 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/06 16:50:18 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 class Bureaucrat {
 	private :
-		std::string		name;
-		int				grade;
+		std::string	const	name;
+		int					grade;
 
 	public :
 		Bureaucrat();	
