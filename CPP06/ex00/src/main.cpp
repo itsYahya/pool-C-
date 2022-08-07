@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 15:33:13 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/06 16:19:11 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/07 16:34:49 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ int	main(){
 		
 		b.incrementGrade();
 		
-		Bureaucrat	a("yahya11", 0);
+		// Bureaucrat	a("yahya11", 0);
+		Bureaucrat aa(b);
+		std::cout << b << std::endl;
+		
 	}
 	catch (std::exception &e){
 		std::cout << e.what() << std::endl;

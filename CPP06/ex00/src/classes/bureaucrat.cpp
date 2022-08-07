@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 21:23:00 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/06 17:02:49 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/07 16:36:28 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ std::ostream	&operator<<(std::ostream &ostream, Bureaucrat const &bureaucrat){
 	return (ostream);
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const &bureaucrat){
+Bureaucrat::Bureaucrat(Bureaucrat const &bureaucrat) : name(bureaucrat.name){
 	std::cout << "Bureaucrat copy constructor called !!" << std::endl;
 	*this = bureaucrat;
 }
