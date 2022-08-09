@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cat.hpp                                            :+:      :+:    :+:   */
+/*   shrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/04 15:58:57 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/05 16:05:59 by yel-mrab         ###   ########.fr       */
+/*   Created: 2022/08/08 16:05:44 by yel-mrab          #+#    #+#             */
+/*   Updated: 2022/08/09 02:15:30 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef SHRUBBERYCREATIONFORM_HPP
+#define SHRUBBERYCREATIONFORM_HPP
 
-#include "animal.hpp"
-#include "brain.hpp"
+#include "form.hpp"
 
-class Cat : public Animal{
+class ShrubberyCreationForm : public Form{
 	private :
-		Brain	*brain;
-		
+		std::string	target;
+	
 	public :
-		Cat();
-		Cat(Cat const &cat);
-		~Cat();
-		Cat		&operator=(Cat const &cat);
-		void	makeSound(void) const;
-		void	whatYouThink();
-		void	setIdea(std::string const &string);
+		ShrubberyCreationForm();
+		ShrubberyCreationForm(std::string target);
+		ShrubberyCreationForm(ShrubberyCreationForm const &shrubbery);
+		~ShrubberyCreationForm();
+		ShrubberyCreationForm	&operator=(ShrubberyCreationForm const &shrubbery);
+		void	execute_(void) const;
 };
 
 #endif

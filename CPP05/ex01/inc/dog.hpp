@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 16:03:48 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/05 01:04:20 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/05 16:06:31 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ class Dog : public Animal{
 		~Dog();
 		Dog		&operator=(Dog const &dog);
 		void	makeSound(void) const;
+		void	whatYouThink();
+		void	setIdea(std::string const &string);
 };
 
 #endif

@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   brain.hpp                                          :+:      :+:    :+:   */
+/*   intern.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/05 00:42:19 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/05 16:12:33 by yel-mrab         ###   ########.fr       */
+/*   Created: 2022/08/09 18:24:24 by yel-mrab          #+#    #+#             */
+/*   Updated: 2022/08/09 18:53:24 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-#define BRAIN_HPP
+#ifndef INTERN_CPP
+#define INTERN_CPP
 
-#include <iostream>
+#include "shrubberyCreationForm.hpp"
+#include "robotomyRequestForm.hpp"
+#include "presidentialPardonForm.hpp"
 
-class Brain{
-	protected :
-		std::string	ideas[100];
-	
+class Intern{
 	public :
-		Brain();
-		~Brain();
-		Brain(Brain const &brain);
-		Brain	&operator=(Brain const &brain);
-		void	whatYouThink();
-		void	setIdea(std::string const &string);
+		Intern();
+		~Intern();
+		Form	*makeForm(std::string name, std::string target);
 };
 
 #endif

@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   brain.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/05 00:42:19 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/05 16:12:33 by yel-mrab         ###   ########.fr       */
+/*   Created: 2022/08/06 15:33:13 by yel-mrab          #+#    #+#             */
+/*   Updated: 2022/08/07 16:34:49 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-#define BRAIN_HPP
+#include "bureaucrat.hpp"
 
-#include <iostream>
-
-class Brain{
-	protected :
-		std::string	ideas[100];
+int	main(){
+	try{
+		Bureaucrat	b("yahya", 1);
 	
-	public :
-		Brain();
-		~Brain();
-		Brain(Brain const &brain);
-		Brain	&operator=(Brain const &brain);
-		void	whatYouThink();
-		void	setIdea(std::string const &string);
-};
+		std::cout << b << std::endl;
 
-#endif
+		b.decrementGrade();
+		
+		std::cout << b << std::endl;
+		
+		b.incrementGrade();
+		
+		// Bureaucrat	a("yahya11", 0);
+		Bureaucrat aa(b);
+		std::cout << b << std::endl;
+		
+	}
+	catch (std::exception &e){
+		std::cout << e.what() << std::endl;
+	}
+	return (0);
+}

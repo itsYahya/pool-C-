@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 16:21:31 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/05 01:47:07 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/05 16:35:02 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,20 @@ int	main(){
 	delete i;
 
 	std::cout << "++++++++++++++++++++" << std::endl;
-	
-	Cat	cat1, cat2;
-
-	cat1.getBrain().setIdea("hello im the one");
-	cat2.getBrain().setIdea("hello im the second");
 	std::cout << std::endl << std::endl;
-	cat1 = cat2;
-	
 	std::cout << std::endl << std::endl;
-	cat2.getBrain().setIdea("hello im not the second gotchaa");
+	Cat	cat1;
 	std::cout << std::endl << std::endl;
-	cat1.getBrain().whatYouThink();
+	std::cout << std::endl << std::endl;
+	cat1.setIdea("machi");
+	std::cout << std::endl << std::endl;
+	std::cout << std::endl << std::endl;
+	Cat	cat2 = cat1;
+	std::cout << std::endl << std::endl;
+	std::cout << std::endl << std::endl;
+	cat1.setIdea("yahya");
+	cat2.whatYouThink();
+	std::cout << std::endl << std::endl;
 	std::cout << std::endl << std::endl;
 	return (0);
 }
