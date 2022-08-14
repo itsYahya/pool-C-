@@ -6,7 +6,7 @@
 #    By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/11 21:39:34 by yel-mrab          #+#    #+#              #
-#    Updated: 2022/08/11 21:50:12 by yel-mrab         ###   ########.fr        #
+#    Updated: 2022/08/14 15:40:05 by yel-mrab         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ OUT = scalar.a
 HEADERSFILES = scalar 
 HEADERS := $(addprefix inc/, $(HEADERSFILES:=.hpp))
 
-FILES = scalar
+FILES = scalar utils checks
 
 OBJS := $(addprefix $(BUILD)/, $(FILES:=.o))
 
