@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 21:39:37 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/14 22:08:15 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/15 19:37:59 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,8 @@ int is_char(char *str){
 	else{
 		std::cout << "char: " << "'" << str[0] <<  "'" << "\n";
 		std::cout << "int: " << static_cast<int>(str[0]) << "\n";
-		std::cout << "float: " << static_cast<float>(str[0]) << "f\n";
-		std::cout << "double: " << static_cast<double>(str[0]) << std::endl;
+		std::cout << "float: " << static_cast<float>(str[0]) << ".0f\n";
+		std::cout << "double: " << static_cast<double>(str[0]) << ".0" << std::endl;
 	}
 	return (1);
 }

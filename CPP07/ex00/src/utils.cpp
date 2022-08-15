@@ -6,13 +6,13 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 14:47:20 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/14 20:36:35 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/15 19:19:05 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "scalar.hpp"
-#include <iostream>
 #include <limits.h>
+#include <iomanip>
 
 int	check_fraction(int i, std::string number, int *err){
 	int p = 0;
@@ -59,13 +59,13 @@ void	print_float(double num, char *str){
 		std::cout << "impossible\n";
 	else
 		std::cout << static_cast<int>(num) << "\n";
-	std::cout << "float: " << static_cast<float>(num) << "f\n";
+	std::cout << "float: " << std::fixed << std::setprecision(1) << static_cast<float>(num) << "f\n";
 	std::cout << "double: " << static_cast<double>(num) << std::endl;
 }
 
 void	print_int(int num){
 	print_char(num);
 	std::cout << "int: " << num << "\n";
-	std::cout << "float: " << static_cast<float>(num) << "f\n";
+	std::cout << "float: " << std::fixed << std::setprecision(1) << static_cast<float>(num) << "f" << std::endl;
 	std::cout << "double: " << static_cast<double>(num) << std::endl;
 }
