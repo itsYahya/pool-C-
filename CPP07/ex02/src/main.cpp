@@ -6,14 +6,13 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 01:51:31 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/16 02:44:08 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/16 15:57:56 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "dynamic.hpp"
 #include <cstdlib>
 #include <iostream>
-#include <typeinfo>
 #include <time.h>
 
 int	main(){
