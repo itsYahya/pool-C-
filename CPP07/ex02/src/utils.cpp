@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 02:43:10 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/16 03:05:28 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/16 03:10:59 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,18 +58,21 @@ void	identify(Base &p){
 	try{
 		(void) dynamic_cast<C&>(p);
 		std::cout << "this object is type C" << std::endl;
+		return ;
 	}
 	catch (std::exception &e){
 	}
 	try{
 		(void) dynamic_cast<A&>(p);
 		std::cout << "this object is type A" << std::endl;
+		return ;
 	}
 	catch (std::exception &e){
 	}
 	try{
 		(void) dynamic_cast<B&>(p);
 		std::cout << "this object is type B" << std::endl;
+		return ;
 	}
 	catch (std::exception &e){
 	}
