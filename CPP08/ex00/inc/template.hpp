@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 16:03:41 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/16 17:35:08 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/17 18:14:50 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ template<typename type>
 type	max(type arg1, type arg2){
 	return (arg1 > arg2) ? arg1 : arg2;
 }
+
 
 #endif

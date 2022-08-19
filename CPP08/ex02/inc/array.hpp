@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 18:43:36 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/16 21:04:39 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/17 18:23:08 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Array{
 	public :
 		Array(){
 			elements = new T();
-			size = 1;
+			size = 0;
 		};
 		~Array(){
 			delete elements;

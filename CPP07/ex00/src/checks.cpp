@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/14 14:49:44 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/14 22:05:01 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/17 17:51:55 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ double	check_double(char *str, int *err){
 	try{
 		*err = 0;
 		num = (double)std::stod(number);
+		std::cout << num << std::endl;
 	}
 	catch (std::exception &e){
 		*err = 1;

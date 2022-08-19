@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 21:39:37 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/16 21:16:35 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/17 18:07:14 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,15 +75,19 @@ int is_char(char *str){
 	return (1);
 }
 
-int	main(int argc, char **argv){
-	if (argc == 2 && is_char(argv[1]))
-		return (0);
-	if (argc == 2 && is_int(argv[1]))
-		return (0);
-	if (argc == 2 && is_double(argv[1]))
-		return (0);
-	if (argc == 2 && is_float(argv[1]))
-		return (0);
-	std::cout << "Expecting a string repredentstion of a C++ literal in its most common form\nWith numbers only" << std::endl;
+int	main(){
+	// if (argc == 2 && is_char(argv[1]))
+	// 	return (0);
+	// if (argc == 2 && is_int(argv[1]))
+	// 	return (0);
+	// if (argc == 2 && is_double(argv[1]))
+	// 	return (0);
+	// if (argc == 2 && is_float(argv[1]))
+	// 	return (0);
+	// std::cout << "Expecting a string repredentstion of a C++ literal in its most common form\nWith numbers only" << std::endl;
+	double d = 123.456123456;
+
+	std::cout << sizeof(double) << std::endl;
+	std::cout << (d) << std::endl;
 	return (0);
 }
