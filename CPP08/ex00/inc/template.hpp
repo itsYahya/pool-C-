@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   template.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/16 01:51:31 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/16 15:57:56 by yel-mrab         ###   ########.fr       */
+/*   Created: 2022/08/16 16:03:41 by yel-mrab          #+#    #+#             */
+/*   Updated: 2022/08/17 18:14:50 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dynamic.hpp"
-#include <cstdlib>
-#include <iostream>
-#include <time.h>
+#ifndef TEMPLATE_HPP
+#define TEMPLATE_HPP
 
-int	main(){
-	Base	*base = generate();
-	identify(base);
-	Base	*base1 = generate();
-	identify(*base1);
-	delete base;
-	delete base1;
-	return 0;
+#include <iostream>
+
+template<typename type>
+void	swap(type *arg1, type *arg2){
+	type	swap;
+
+	swap = *arg1;
+	*arg1 = *arg2;
+	*arg2 = swap;
 }
+
+template<typename type>
+type	min(type arg1, type arg2){
+	return (arg1 < arg2) ? arg1 : (arg2);
+}
+
+template<typename type>
+type	max(type arg1, type arg2){
+	return (arg1 > arg2) ? arg1 : arg2;
+}
+
+
+#endif

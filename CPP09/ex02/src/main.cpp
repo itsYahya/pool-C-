@@ -5,22 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/16 01:51:31 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/16 15:57:56 by yel-mrab         ###   ########.fr       */
+/*   Created: 2022/08/18 22:15:15 by yel-mrab          #+#    #+#             */
+/*   Updated: 2022/08/18 23:34:06 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dynamic.hpp"
-#include <cstdlib>
-#include <iostream>
-#include <time.h>
+#include "MutantStack.hpp"
 
 int	main(){
-	Base	*base = generate();
-	identify(base);
-	Base	*base1 = generate();
-	identify(*base1);
-	delete base;
-	delete base1;
+	MutantStack<int> mstack;
+	mstack.push(5);
+	mstack.push(17);
+	std::cout << mstack.top() << std::endl;
+	mstack.pop();
+	std::cout << mstack.size() << std::endl;
+	mstack.push(3);
+	mstack.push(5);
+	mstack.push(737);
+	//[...]
+	mstack.push(0);
+	MutantStack<int>::iterator it = mstack.begin();
+	MutantStack<int>::iterator ite = mstack.end();
+	++it;
+	--it;
+	while (it != ite)
+	{
+	std::cout << *it << std::endl;
+	++it;
+	}
+	std::stack<int> s(mstack);
 	return 0;
 }

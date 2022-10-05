@@ -6,7 +6,7 @@
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/16 02:43:10 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/16 03:10:59 by yel-mrab         ###   ########.fr       */
+/*   Updated: 2022/08/16 15:59:56 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void	identify(Base *p){
 		std::cout << "this object is type B" << std::endl;
 		return ;
 	}
+	std::cout << "this object is non of the given types" << std::endl;
 }
 
 void	identify(Base &p){
@@ -76,4 +77,5 @@ void	identify(Base &p){
 	}
 	catch (std::exception &e){
 	}
+	std::cout << "this object is non of the given types" << std::endl;
 }

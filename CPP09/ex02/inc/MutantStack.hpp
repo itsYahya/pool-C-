@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   MutantStack.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-mrab <yel-mrab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/16 01:51:31 by yel-mrab          #+#    #+#             */
-/*   Updated: 2022/08/16 15:57:56 by yel-mrab         ###   ########.fr       */
+/*   Created: 2022/08/18 22:11:14 by yel-mrab          #+#    #+#             */
+/*   Updated: 2022/08/18 23:30:08 by yel-mrab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dynamic.hpp"
-#include <cstdlib>
-#include <iostream>
-#include <time.h>
+#ifndef MUTANTSTACK_HPP
+#define MUTANTSTACK_HPP
 
-int	main(){
-	Base	*base = generate();
-	identify(base);
-	Base	*base1 = generate();
-	identify(*base1);
-	delete base;
-	delete base1;
-	return 0;
-}
+#include <stack>
+#include <iostream>
+
+template<typename type>
+class MutantStack : public std::stack<type>{
+	public :
+		MutantStack(){};
+		typedef typename std::stack<type>::container_type::iterator iterator;
+		iterator begin() { return this->c.begin(); };
+		iterator end() { return this->c.end(); }
+};
+
+#endif
